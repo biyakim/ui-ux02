@@ -5,3 +5,15 @@
 	<heading>Reminder</heading>
 	<body>Don't forget me this weekend!</body>
 </note>
+<note>
+	<to>suny</to>
+	<from>jenny</from>
+	<heading>look</heading>
+	<body>let's go city</body>
+</note>
+<note>
+	<to>candy</to>
+	<from>merry</from>
+	<heading>present</heading>
+	<body>I like this present</body>
+</note>

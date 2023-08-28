@@ -1,0 +1,14 @@
+    <head>
+        <title>윤선희Subway_json</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<!-- 모바일부분 추가 -->        
+        <script src="subway.js"></script>
+        <link rel="stylesheet" href="subway.css">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<!-- 모바일부분 추가 --> 
+    </head>
+
+	var url = "https://proxyserver4cors.herokuapp.com/" +  "http://openapi.seoul.go.kr:8088/openapi_key/json/CardSubwayStatsNew/1/100/20230101/";

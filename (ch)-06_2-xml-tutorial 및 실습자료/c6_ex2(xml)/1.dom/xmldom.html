@@ -4,7 +4,10 @@
 <div>
 <b>To:</b> <span id="to"></span><br />
 <b>From:</b> <span id="from"></span><br />
-<b>Message:</b> <span id="message"></span>
+<b>Message:</b> <span id="message"></span><br/>
+<b>To:</b> <span id="to1"></span><br />
+<b>From:</b> <span id="from1"></span><br />
+<b>Message:</b> <span id="message1"></span>
 </div>
 
 <script>
@@ -27,6 +30,12 @@ xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
 document.getElementById("message").innerHTML=
 xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
 
+document.getElementById("to1").innerHTML=
+xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+document.getElementById("from1").innerHTML=
+xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+document.getElementById("message1").innerHTML=
+xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
 </script>
 
 </body>
