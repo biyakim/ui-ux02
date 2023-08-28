@@ -1,11 +1,9 @@
-
 /* myLoc.js */
-
 var watchId = null;
 var map = null;
 var ourCoords =  {
-	latitude: 37.555946,
-	longitude: 126.972317
+	latitude: 47.624851,
+	longitude: -122.52099
 };
 
 window.onload = getMyLocation;
@@ -32,18 +30,14 @@ function displayLocation(position) {
 
 	var km = computeDistance(position.coords, ourCoords);
 	var distance = document.getElementById("distance");
-	distance.innerHTML = "당신은 서울역과 " + km + "km 떨어져 있습니다";
+	distance.innerHTML = "당신은 WickedlySmart HQ와 " + km + "km 떨어져 있습니다";
 
 	if (map == null) {
 		showMap(position.coords);
 	}
-//추가2	
-	if(map == null) {
-		showMap(position.coords);
-	}else{
-		scrollMapPosition(position.coords)
+	else {
+		scrollMapToPosition(position.coords);
 	}
-
 }
 
 
@@ -135,25 +129,17 @@ function watchLocation() {
 					displayError);
 }
 
-//추가1
-function scrollMapPosition(coords) {
-	var latitude = coords,latitude;
+function scrollMapToPosition(coords) {
+	var latitude = coords.latitude;
 	var longitude = coords.longitude;
 
 	var latlong = new google.maps.LatLng(latitude, longitude);
 	map.panTo(latlong);
 
-	addMarker(map, latlong, "Your new loaction", "You moved to : " + latitude + ", " + longitude)
+	// 새 마커 추가
+	addMarker(map, latlong, "Your new location", "You moved to: " + 
+								latitude + ", " + longitude);
 }
-
-
-
-
-
-
-
-
-
 
 function clearWatch() {
 	if (watchId) {
@@ -161,6 +147,7 @@ function clearWatch() {
 		watchId = null;
 	}
 }
+
 
 
 
